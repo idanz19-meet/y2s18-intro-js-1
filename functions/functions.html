@@ -13,9 +13,25 @@
 function isLetter(char) {
     char = char.toLowerCase();
     return "abcdefghijklmnopqrstuvwxyz".indexOf(char) >= 0;
-}
+	}
+	var pali = prompt("I require a sentence");
+	function isPolindrome(pali){
+    	var Palindrome = []
+		for (var i = 0; i < pali.length; i++){
+			if (isLetter(pali[i]))
+				Palindrome.push(pali[i]);
+		}
+		if (i == pali.length) {
+			var stringPalindrome = Palindrome.join();
+			var reversedString = Palindrome.reverse().join();
+			if (stringPalindrome == reversedString)
+				alert("that sentence is a plindrome!")
+			else
+				alert("that's not a plindrome!")
+		}
+	}
+	isPolindrome(pali)
 
-// Write your isPalindrome function here!
 
     </script>
 </body>
